@@ -3,7 +3,7 @@ import { gql } from 'apollo-server-koa'
 export const NewTerminology = gql`
   input NewTerminology {
     name: String!
-    domain: Domain!
+    domain: String!
     description: String
     locale: String
     category: String
