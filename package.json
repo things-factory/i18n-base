@@ -1,6 +1,6 @@
 {
   "name": "@things-factory/i18n-base",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "main": "dist-server/index.js",
   "browser": "client/index.js",
   "things-factory": true,
@@ -24,9 +24,9 @@
   },
   "dependencies": {
     "@things-factory/shell": "*",
-    "i18next": "^15.1.0",
+    "i18next": "^17.0.2",
     "i18next-browser-languagedetector": "^3.0.1",
-    "i18next-xhr-backend": "^2.0.1"
+    "i18next-xhr-backend": "^3.0.0"
   },
   "devDependencies": {}
 }
