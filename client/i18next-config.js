@@ -4,9 +4,9 @@
 
 import { default as originalI18next } from 'i18next'
 import LngDetector from 'i18next-browser-languagedetector'
-import Backend from 'i18next-xhr-backend/dist/es/index.js'
+import I18NextXhrBackend from 'i18next-xhr-backend'
 
-export const i18next = originalI18next.use(LngDetector).use(Backend)
+export const i18next = originalI18next.use(LngDetector).use(I18NextXhrBackend)
 
 i18next.init({
   fallbackLng: 'en-US',
