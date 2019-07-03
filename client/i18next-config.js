@@ -19,6 +19,6 @@ i18next.init({
     suffix: '}'
   },
   backend: {
-    loadPath: '/assets/locales/{lng}.json'
+    loadPath: '/assets/{ns}/locales/{lng}.json'
   }
 })

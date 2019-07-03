@@ -10,7 +10,7 @@ import { i18next } from '../i18next-config'
 export default class I18nMsg extends localize(i18next)(LitElement) {
   static get properties() {
     return {
-      msgid: String
+      msgid: { attribute: true }
     }
   }
 
