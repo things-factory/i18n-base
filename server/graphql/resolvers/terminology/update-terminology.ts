@@ -2,14 +2,16 @@ import { getRepository } from 'typeorm'
 import { Terminology } from '../../../entities'
 
 export const updateTerminology = {
-  async updateTerminology(_, { name, patch }) {
+  async updateTerminology(_: any, { name, patch }, context: any) {
     const repository = getRepository(Terminology)
-
-    const terminology = await repository.findOne({ name })
+    const terminology = await repository.findOne({
+      where: { domain: context.domain, name }
+    })
 
     return await repository.save({
       ...terminology,
-      ...patch
+      ...patch,
+      updaterId: context.state.user.id
     })
   }
 }

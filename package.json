@@ -1,6 +1,6 @@
 {
   "name": "@things-factory/i18n-base",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "main": "dist-server/index.js",
   "browser": "client/index.js",
   "things-factory": true,
@@ -23,6 +23,7 @@
     "migration:revert": "node ./node_modules/typeorm/cli.js migration:revert"
   },
   "dependencies": {
+    "@things-factory/auth-base": "*",
     "@things-factory/shell": "*",
     "i18next": "^17.0.2",
     "i18next-browser-languagedetector": "^3.0.1",

@@ -9,5 +9,9 @@ export const Terminology = gql`
     locale: String
     category: String
     display: String
+    creator: User
+    updater: User
+    createdAt: String
+    updatedAt: String
   }
 `
