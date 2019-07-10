@@ -1,6 +1,6 @@
-import { Domain } from '@things-factory/shell'
-import { CreateDateColumn, UpdateDateColumn, Column, Entity, Index, ManyToOne, PrimaryGeneratedColumn } from 'typeorm'
 import { User } from '@things-factory/auth-base'
+import { Domain } from '@things-factory/shell'
+import { Column, CreateDateColumn, Entity, Index, ManyToOne, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm'
 
 @Entity('terminologies')
 @Index('ix_term_0', (term: Terminology) => [term.domain, term.locale, term.category, term.name], { unique: true })
@@ -37,9 +37,13 @@ export class Terminology {
   @UpdateDateColumn()
   updatedAt: Date
 
-  @ManyToOne(type => User)
+  @ManyToOne(type => User, {
+    nullable: true
+  })
   creator: User
 
-  @ManyToOne(type => User)
+  @ManyToOne(type => User, {
+    nullable: true
+  })
   updater: User
 }
