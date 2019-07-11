@@ -14,21 +14,21 @@ export class Terminology {
   @ManyToOne(type => Domain)
   domain: Domain
 
-  @Column('text')
+  @Column()
   name: string
 
-  @Column('text', {
+  @Column({
     nullable: true
   })
   description: string
 
-  @Column('text')
+  @Column()
   locale: string
 
-  @Column('text')
+  @Column()
   category: string
 
-  @Column('text')
+  @Column()
   display: string
 
   @CreateDateColumn()
