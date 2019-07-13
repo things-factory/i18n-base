@@ -20,7 +20,6 @@ i18next.init({
   },
   // load: 'currentOnly',
   backend: {
-    // loadPath: '/assets/{ns}/locales/{lng}.json'
     loadPath: '/{ns}/{lng}.json'
   }
 })
