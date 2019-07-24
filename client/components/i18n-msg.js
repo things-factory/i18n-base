@@ -22,4 +22,3 @@ export default class I18nMsg extends localize(i18next)(LitElement) {
 }
 
 customElements.define('i18n-msg', I18nMsg)
-customElements.define('things-i18n-msg', I18nMsg)
