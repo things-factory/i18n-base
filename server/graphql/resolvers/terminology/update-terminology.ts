@@ -11,7 +11,7 @@ export const updateTerminology = {
     return await repository.save({
       ...terminology,
       ...patch,
-      updaterId: context.state.user.id
+      updater: context.state.user
     })
   }
 }
