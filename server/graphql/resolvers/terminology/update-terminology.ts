@@ -5,7 +5,7 @@ export const updateTerminology = {
   async updateTerminology(_: any, { name, patch }, context: any) {
     const repository = getRepository(Terminology)
     const terminology = await repository.findOne({
-      where: { domain: context.domain, name }
+      where: { domain: context.state.domain, name }
     })
 
     return await repository.save({
