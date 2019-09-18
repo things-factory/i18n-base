@@ -1,5 +1,5 @@
 import { store, UPDATE_CONTEXT } from '@things-factory/shell'
-export { i18next } from './i18next-config'
+import { i18next } from './i18next-config'
 
 function updateContext() {
   store.dispatch({
