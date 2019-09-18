@@ -4,21 +4,22 @@
 
 export const localize = i18next => baseElement =>
   class extends baseElement {
-    languageUpdated() {
-      this.requestUpdate()
-    }
+    languageUpdated(i18next) {}
 
     connectedCallback() {
       i18next.on('initialized', options => {
-        this.languageUpdated()
+        this.languageUpdated(i18next)
+        this.requestUpdate()
       })
 
       i18next.on('languageChanged', () => {
-        this.languageUpdated()
+        this.languageUpdated(i18next)
+        this.requestUpdate()
       })
 
       i18next.store.on('added', (lng, ns) => {
-        this.languageUpdated()
+        this.languageUpdated(i18next)
+        this.requestUpdate()
       })
 
       if (super.connectedCallback) {
