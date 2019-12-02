@@ -7,7 +7,7 @@ export type T_Arugments = {
   options?: Object
 }
 
-export async function t({ key, locale, options }: T_Arugments) {
+export async function t({ key, locale = 'en-US', options }: T_Arugments) {
   let value = await getTerminology({
     key,
     locale
